@@ -1,29 +1,41 @@
 import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 import { Link } from 'expo-router'
 import Logo from "../assets/image/logo_light.png";
+
+// Themed Components
+import ThemedView from "../components/ThemedView";
+import ThemedLogo from "../components/ThemedLogo";
+import ThemedText from "../components/ThemedText";
+
+import Spacer from "../components/Spacer";
+
+
+
 const Home = () => {
     return (
-        <View style={styles.container}>
-            <Image source={Logo} style={styles.img}></Image>
-            <Text style={[styles.title, { color: "purple" }]}>Top 1</Text>
+        <ThemedView style={styles.container}>
+            <ThemedLogo/>
+            <Spacer height={20}/>
+            <ThemedText style={styles.title} title = {true}>Top 1</ThemedText>
 
-            <Text
-                style={{
-                    marginTop: 10,
-                    marginBottom: 30,
-                }}
-            >
-                Reading List App
-            </Text>
+            <Spacer height={10}/>
+            <ThemedText>Reading List App</ThemedText>
+            <Spacer height={10}/>
 
-            <Link href='/about' style={styles.link}>About Page</Link>
-            <Link href='/contact' style={styles.link}>Contact Page</Link>
-            <Link href='/blank' style={styles.link}>Blank Page</Link>
+            <Link href='/about' style={styles.link}>
+                <ThemedText>About Page</ThemedText>
+            </Link>
+            <Link href='/contact' style={styles.link}>
+                <ThemedText>Contact Page</ThemedText>
+            </Link>
+            <Link href='/blank' style={styles.link}>
+                <ThemedText>Blank Page</ThemedText>
+             </Link>
 
-            <View style={styles.card}>
+            {/* <View style={styles.card}>
                 <Text>Card</Text>
-            </View>
-        </View>
+            </View> */}
+        </ThemedView>
     );
 };
 
@@ -34,7 +46,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "white",
+        // backgroundColor: "white", // In React Native, right most style always wins
     },
 
     title: {
@@ -58,9 +70,6 @@ const styles = StyleSheet.create({
         elevation: 4,
     },
 
-    img: {
-        marginVertical: 20,
-    },
 
     link : {
         marginVertical : 10, 
