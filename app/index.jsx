@@ -18,6 +18,7 @@ const Home = () => {
 
             <Link href='/about' style={styles.link}>About Page</Link>
             <Link href='/contact' style={styles.link}>Contact Page</Link>
+            <Link href='/blank' style={styles.link}>Blank Page</Link>
 
             <View style={styles.card}>
                 <Text>Card</Text>
