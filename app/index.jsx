@@ -14,13 +14,13 @@ import Spacer from "../components/Spacer";
 const Home = () => {
     return (
         <ThemedView style={styles.container}>
-            <ThemedLogo/>
-            <Spacer height={20}/>
-            <ThemedText style={styles.title} title = {true}>Top 1</ThemedText>
+            <ThemedLogo />
+            <Spacer height={20} />
+            <ThemedText style={styles.title} title={true}>Top 1</ThemedText>
 
-            <Spacer height={10}/>
+            <Spacer height={10} />
             <ThemedText>Reading List App</ThemedText>
-            <Spacer height={10}/>
+            <Spacer height={10} />
 
             <Link href='/about' style={styles.link}>
                 <ThemedText>About Page</ThemedText>
@@ -34,9 +34,19 @@ const Home = () => {
             <Link href='/register' style={styles.link}>
                 <ThemedText>Register Page</ThemedText>
             </Link>
+            <Link href='/profile' style={styles.link}>
+                <ThemedText>Profile</ThemedText>
+            </Link>
+            <Link href='/books' style={styles.link}>
+                <ThemedText>Books</ThemedText>
+            </Link>
+            <Link href='/create' style={styles.link}>
+                <ThemedText>Create</ThemedText>
+            </Link>
             <Link href='/blank' style={styles.link}>
                 <ThemedText>Blank Page</ThemedText>
-             </Link>
+            </Link>
+
 
             {/* <View style={styles.card}>
                 <Text>Card</Text>
@@ -77,8 +87,8 @@ const styles = StyleSheet.create({
     },
 
 
-    link : {
-        marginVertical : 10, 
-        borderBottomWidth : 1
+    link: {
+        marginVertical: 10,
+        borderBottomWidth: 1
     }
 });
